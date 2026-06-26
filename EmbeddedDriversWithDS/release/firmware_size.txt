@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+   2390	     62	      0	   2452	    994	E:\C Sessions\EmbeddedDriversWithDS\release\firmware.elf
