@@ -1,4 +1,3 @@
-
 #include "LCD_Config.h"
 #include "LCD_Private.h"
 #include <stdint.h>
@@ -110,9 +109,6 @@ void hLCD_WriteString(const char *str)
             index++;
         }
     }
-    else
-    {
-    }
 }
 
 void hLCD_WriteNumber(int32_t Number)
@@ -120,6 +116,7 @@ void hLCD_WriteNumber(int32_t Number)
     if (Number == 0)
     {
         hLCD_WriteChar('0');
+        return;
     }
     else if (Number < 0)
     {
@@ -144,6 +141,29 @@ void hLCD_WriteNumber(int32_t Number)
     while (index--)
     {
         hLCD_WriteChar(NumArr[index]);
-        _delay_ms(20);
+        _delay_ms(2); // Reduced from 20ms to speed up display refresh
+    }
+}
+
+
+void hLCD_DisplayTask(uint8_t TaskNum, uint8_t priority, const char* taskName)
+{
+
+    hLCD_Clear(1);
+    hLCD_Clear(2);
+
+    hLCD_SetCursor(1, 0);
+    hLCD_WriteString("ID:");
+    hLCD_WriteNumber(TaskNum);
+    hLCD_WriteString(" Prio:");
+    hLCD_WriteNumber(priority);
+
+    hLCD_SetCursor(2, 0);
+    if (taskName != Null) 
+    {
+        hLCD_WriteString(taskName);
+    }else
+    {
+         hLCD_WriteString("SIKE!!");
     }
 }

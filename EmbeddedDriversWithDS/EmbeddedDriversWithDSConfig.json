@@ -1,7 +1,7 @@
 {
   "projectName": "EmbeddedDriversWithDS",
-  "projectPath": "E:\\C Sessions\\EmbeddedDriversWithDS",
-  "outputPath": "E:\\C Sessions\\EmbeddedDriversWithDS",
+  "projectPath": "E:\\C Sessions\\C_DataStructures\\EmbeddedDriversWithDS",
+  "outputPath": "E:\\C Sessions\\C_DataStructures\\EmbeddedDriversWithDS",
   "outputName": "",
   "target": "AVR",
   "mcu": "atmega128",
@@ -18,13 +18,13 @@
   "dataSections": false,
   "linkerScript": "",
   "includePaths": "",
-  "customFlags": "-Wall -Wextra",
+  "customFlags": "-Wall -Wextra ",
   "debugLevel": "g2",
   "debugFormat": "dwarf-2",
   "interfaceType": "SPI",
   "port": "COM1 - Communications Port (COM1)",
   "baudRate": "115200",
   "timeout": "5000",
-  "firmwareFile": "E:\\C Sessions\\EmbeddedDriversWithDS/EmbeddedDriversWithDS.hex",
+  "firmwareFile": "E:\\C Sessions\\C_DataStructures\\EmbeddedDriversWithDS/EmbeddedDriversWithDS.hex",
   "programmer": "usbasp"
 }
